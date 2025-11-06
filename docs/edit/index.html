@@ -1,11 +1,22 @@
-<!doctype html>
-<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
-  <head>
-    <title>Redirect to editable app</title>
-    <meta
-      http-equiv="refresh"
-      content="0;URL='../index.html?_shinylive-mode=editor-terminal-viewer'"
-    />
-  </head>
-  <body></body>
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <script src="shinylive/shinylive.js"></script>
+  <script type="module">
+    import { runApp } from "./shinylive/shinylive.js";
+    runApp("app.json");
+  </script>
+  <link rel="stylesheet" href="shinylive/style.css">
+  <style>
+    body, html {
+      margin: 0;
+      height: 100%;
+      background: #0e1a2b;
+    }
+  </style>
+</head>
+<body>
+  <div id="shinylive-container" style="height:100%; width:100%;"></div>
+</body>
 </html>
